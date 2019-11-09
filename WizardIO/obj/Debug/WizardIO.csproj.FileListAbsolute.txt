@@ -1,0 +1,9 @@
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\bin\Debug\WizardIO.dll
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\bin\Debug\WizardIO.pdb
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\bin\Debug\UnityEngine.dll
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\bin\Debug\UnityEngine.xml
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\obj\Debug\WizardIO.csprojAssemblyReference.cache
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\obj\Debug\WizardIO.csproj.CoreCompileInputs.cache
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\obj\Debug\WizardIO.csproj.CopyComplete
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\obj\Debug\WizardIO.dll
+C:\Users\mda_g\source\repos\WizardIO\WizardIO\obj\Debug\WizardIO.pdb
