@@ -20,85 +20,62 @@ namespace WizardIO
         {
             outputPath = output;
         }
-        // Функция считывает массив строк с файла
-        public static string[] ReadStringArrayFromText()
+
+        public static void ReadFromText(ref string[] variable)
         {
-            string[] smth;
-            //Чтение массива с файла
-            return smth = File.ReadAllLines(inputPath);
+            variable = File.ReadAllLines(inputPath);
 
         }
-        // Фунция считывает массив целых чисел с файла, комментарии с предыдущей функции соответствуют и для этой
-        public static int[] ReadIntArrayFromText()
+        public static void ReadFromText(ref int[] variable)
+        {
+            string[] smthstr;
+            smthstr = File.ReadAllLines(inputPath);
+            variable = new int[smthstr.Length];
+            for (int i = 0; i < smthstr.Length; i++)
+            {
+                variable[i] = Convert.ToInt32(smthstr[i]);
+            }
+        }
+        public static void ReadFromText(ref float[] variable)
         {
             string[] smth;
             smth = File.ReadAllLines(inputPath);
-            int[] smthint = new int[smth.Length];
-            // Преобразование из строки в целое число
+            variable = new float[smth.Length];
             for (int i = 0; i < smth.Length; i++)
             {
-                smthint[i] = Convert.ToInt32(smth[i]);
+                variable[i] = Convert.ToSingle(smth[i]);
             }
-            return smthint;
-        }
-        // Фунция считывает массив дробных чисел с файла, комментарии с преыдущей функции соответствуют и для этой
-        public static float[] ReadFloatArrayFromText()
-        {
-            string[] smth;
-            smth = File.ReadAllLines(inputPath);
-            float[] smthfloat = new float[smth.Length];
-            // Преобразование из строки в дробное число
-            for (int i = 0; i < smth.Length; i++)
-            {
-                smthfloat[i] = Convert.ToSingle(smth[i]);
-            }
-            return smthfloat;
         }
 
-        // Фунция считывает первую строку с файла в string, комментарии с прошлой функции соответствуют и для этой
-        public static string ReadStringFromText()
+        public static void ReadFromText(ref string variable)
         {
-            string smth;
-            //Чтение 1 строки под номером 0
-            return smth = File.ReadAllLines(inputPath).Skip(0).First();
+             variable = File.ReadAllLines(inputPath).Skip(0).First();
         }
-        // Фунция считывает первую строку с файла в int, комментарии с прошлой функции соответствуют и для этой
-        public static int ReadIntFromText()
+        public static void ReadFromText(ref int variable)
         {
-            int smth;
-            return smth = Convert.ToInt32(File.ReadAllLines(inputPath).Skip(0).First());
+             variable = Convert.ToInt32(File.ReadAllLines(inputPath).Skip(0).First());
         }
-        // Фунция считывает первую строку с файла в float, комментарии с прошлой функции соответствуют и для этой
-        public static float ReadFloatFromText()
+        public static void ReadFromText(ref float variable)
         {
-            float smth;
-            return smth = Convert.ToSingle(File.ReadAllLines(inputPath).Skip(0).First());
+             variable = Convert.ToSingle(File.ReadAllLines(inputPath).Skip(0).First());
         }
 
-        // Фунция считывает n-ую строку с файла в string, комментарии с прошлой функции соответствуют и для этой
-        public static string ReadStringFromText(int n)
+        public static void ReadFromText(ref string variable, int n)
         {
-            string smth;
-            return smth = File.ReadAllLines(inputPath).Skip(n).First();
-
+            variable = File.ReadAllLines(inputPath).Skip(n).First();
         }
-        // Фунция считывает n-ую строку с файла в int, комментарии с прошлой функции соответствуют и для этой
-        public static int ReadIntFromText(int n)
+        public static void ReadFromText(ref int variable, int n)
         {
-            int smth;
-            return smth = Convert.ToInt32(File.ReadAllLines(inputPath).Skip(n).First());
+            variable = Convert.ToInt32(File.ReadAllLines(inputPath).Skip(n).First());
         }
-        // Фунция считывает n-ую строку с файла в float, комментарии с прошлой функции соответствуют и для этой
-        public static float ReadFloatFromText(int n)
+        public static void ReadFromText(ref float variable, int n)
         {
-            float smth;
-            return smth = Convert.ToSingle(File.ReadAllLines(inputPath).Skip(n).First());
+            variable = Convert.ToSingle(File.ReadAllLines(inputPath).Skip(n).First());
         }
 
-        // Вывод в файл
         public static void WriteToText(string content)
         {
-            // Если файл не существуе, что создаётся новый
+
             if (!File.Exists(outputPath))
             {
                 File.WriteAllText(outputPath, content);
